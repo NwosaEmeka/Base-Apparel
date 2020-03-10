@@ -1,0 +1,130 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+.main-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	height: 100vh;
+}
+
+.right-content img {
+	height: 100%;
+	width: 100%;
+}
+
+.left-content {
+	width: 100%;
+	height: 100%;
+	background: url("images/bg-pattern-desktop.svg") no-repeat center center/cover;
+}
+.container {
+	max-width: 400px;
+	margin: 50px auto;
+	padding: 10px;
+}
+.mobile-hero {
+	width: 100%;
+	display: none;
+}
+.mobile-hero img {
+	width: 100%;
+}
+.left-content-items {
+	margin-top: 100px;
+}
+.left-content-items h1 {
+	text-transform: uppercase;
+	letter-spacing: 0.9rem;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+.left-content-items span {
+	color: hsl(0, 36%, 80%);
+	font-weight: 300;
+}
+.content-p {
+	color: hsl(0, 36%, 80%);
+	margin-bottom: 30px;
+	line-height: 1.5;
+}
+
+input[type="email"] {
+	height: 40px;
+	width: 100%;
+	border: 1px solid hsl(0, 80%, 86%);
+	outline: none;
+	border-radius: 50px;
+	padding: 8px 15px;
+}
+
+input[type="email"]::placeholder {
+	color: hsl(0, 80%, 90%);
+}
+.input-field {
+	width: 90%;
+	position: relative;
+}
+.error-img {
+	position: absolute;
+	top: 50%;
+	right: 40px;
+	transform: translateY(-50%);
+	display: none;
+}
+.form-group {
+	display: flex;
+}
+.form-group a {
+	padding: 10px 15px;
+	width: 80px;
+	height: 40px;
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	border-radius: 50px;
+	transform: translateX(-30px);
+	text-align: center;
+	text-decoration: none;
+}
+.fa {
+	color: #fff;
+}
+.form-group a:hover {
+	background: linear-gradient(135deg, hsl(0, 80%, 90%), hsl(0, 74%, 85%));
+	box-shadow: 0px 5px 2px hsl(0, 80%, 90%);
+	transition: box-shadow 0.2s ease-in;
+}
+.error-p {
+	color: hsl(0, 74%, 74%);
+	padding: 8px 15px;
+	display: none;
+}
+@media (max-width: 700px) {
+	.main-content {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 450px) {
+	.main-content {
+		display: block;
+	}
+	.right-content {
+		display: none;
+	}
+	.mobile-hero {
+		display: block;
+	}
+	.left-content-items h1,
+	.content-p {
+		text-align: center;
+	}
+	.left-content-items {
+		margin-top: 50px;
+	}
+}
